@@ -1,38 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Hóa đơn bán hàng - ITShop.VN</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fdfdfd;
+        margin: 40px;
+        line-height: 1.6;
+      }
+      h1 {
+        color: #2980b9;
+      }
+      .section {
+        margin-bottom: 30px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      code {
+        background-color: #efefef;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      img {
+        max-width: 100%;
+        border: 1px solid #ccc;
+        padding: 5px;
+      }
+    </style>
+  </head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-	<title>Hóa đơn bán hàng - ITShop.VN</title>
-</head>
+  <body>
+    <div class="container">
+      <div id="navbar"></div>
 
-<body>
-	<div class="container">
-		<div id="navbar"></div>
-		
-		<div class="card mt-3">
-			<div class="card-header">Hóa đơn bán hàng</div>
-			<div class="card-body">
-				<p class="card-text">Hướng dẫn sử dụng màn hình <strong>Hóa đơn bán hàng</strong>.</p>
-				<img src="images/hoadon.png" class="img-fluid mx-auto d-block" />
-				<p class="card-text mt-3">Hướng dẫn sử dụng màn hình <strong>Hóa đơn bán hàng chi tiết</strong>.</p>
-				<img src="images/hoadonchitiet.png" class="img-fluid mx-auto d-block" />
-			</div>
-		</div>
-		
-		<div id="footer"></div>
-	</div>
-	
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-	<script>
-		$(document).ready(() => {
-			$('#navbar').load('inc/navbar.html');
-			$('#footer').load('inc/footer.html');
-		});
-	</script>
-</body>
+      <div class="card mt-3">
+        <div class="card-header">Hóa đơn bán hàng</div>
+        <div class="card-body">
+          <p class="card-text">
+            Hướng dẫn sử dụng màn hình <strong>Hóa đơn bán hàng</strong>.
+          </p>
+          <div class="section">
+            <h2>1. Mục đích</h2>
+            <p>
+              Form hóa đơn dùng để tìm kiếm, tra cứu và xuất danh sách các hóa
+              đơn đã được tạo trong hệ thống.
+            </p>
+          </div>
 
+          <div class="section">
+            <h2>2. Chức năng chính</h2>
+            <ul>
+              <li>
+                <strong>Tìm kiếm hóa đơn:</strong> Nhập <code>Mã hóa đơn</code>,
+                <code>Tên khách hàng</code> vào ô tìm kiếm để lọc danh sách hóa
+                đơn.
+              </li>
+              <li>
+                <strong>Xem chi tiết:</strong> Nhấn đúp hoặc chọn dòng và nhấn
+                <code>Xem chi tiết</code> để hiển thị thông tin hóa đơn (sản
+                phẩm, số lượng, tổng tiền...).
+              </li>
+              <li>
+                <strong>Xuất hóa đơn:</strong> Chọn hóa đơn rồi nhấn
+                <code>Xuất file</code> để in hoặc lưu ra file PDF, Excel.
+              </li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h2>3. Các trường hiển thị</h2>
+            <ul>
+              <li><code>Mã hóa đơn</code></li>
+              <li><code>Ngày lập</code></li>
+              <li><code>Nhân viên</code></li>
+              <li><code>Khách hàng</code></li>
+              <li><code>Tổng tiền</code></li>
+              <li><code>Chi tiết</code></li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h2>4. Lưu ý sử dụng</h2>
+            <ul>
+              <li>
+                Chức năng này chỉ hỗ trợ tìm kiếm và xuất dữ liệu, không chỉnh
+                sửa nội dung hóa đơn.
+              </li>
+              <li>Kiểm tra kỹ dữ liệu trước khi xuất file.</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h2>5. Giao diện mẫu</h2>
+            <p>Giao diện có thể như hình minh họa sau (nếu có):</p>
+            <img src="images/hoadon.png" class="img-fluid mx-auto d-block" />
+          </div>
+
+          <p class="card-text mt-3">
+            Hướng dẫn sử dụng màn hình
+            <strong>Hóa đơn bán hàng chi tiết</strong>.
+          </p>
+          <h2>1. Mục đích</h2>
+          <p>
+            Màn hình này dùng để lập hóa đơn bán hàng, ghi nhận chi tiết sản
+            phẩm, số lượng, đơn giá và tổng thành tiền.
+          </p>
+
+          <h2>2. Các bước thực hiện</h2>
+          <ul>
+            <li>
+              <strong>Bước 1:</strong> Chọn <code>Nhân viên lập</code> và
+              <code>Khách hàng</code> từ danh sách.
+            </li>
+            <li>
+              <strong>Bước 2:</strong> (Tuỳ chọn) Ghi chú cho hóa đơn nếu cần.
+            </li>
+            <li><strong>Bước 3:</strong> Chọn sản phẩm cần bán.</li>
+            <li>
+              <strong>Bước 4:</strong> Nhập <code>Đơn giá bán</code> và
+              <code>Số lượng bán</code>.
+            </li>
+            <li>
+              <strong>Bước 5:</strong> Nhấn <code>Xác nhận bán</code> để thêm
+              vào danh sách chi tiết.
+            </li>
+            <li>
+              <strong>Bước 6:</strong> Khi đã hoàn tất, nhấn
+              <code>Lưu hóa đơn</code> để ghi lại hóa đơn.
+            </li>
+            <li><strong>Nếu muốn in:</strong> Nhấn <code>In hóa đơn</code>.</li>
+            <li>
+              <strong>Thoát:</strong> Nhấn <code>Thoát</code> để đóng form.
+            </li>
+          </ul>
+
+          <h2>3. Giao diện mẫu</h2>
+          <p>Dưới đây là ảnh minh họa giao diện:</p>
+          <img
+            src="images/hoadonchitiet.png"
+            class="img-fluid mx-auto d-block"
+          />
+
+          <h2>4. Lưu ý</h2>
+          <ul>
+            <li>Các ô có dấu <code>(*)</code> là bắt buộc nhập.</li>
+            <li>Kiểm tra kỹ đơn giá và số lượng trước khi xác nhận bán.</li>
+            <li>
+              Có thể xóa dòng đã thêm bằng nút <code>Xóa</code> ở bên phải.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="footer"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#navbar").load("inc/navbar.html");
+        $("#footer").load("inc/footer.html");
+      });
+    </script>
+  </body>
 </html>

@@ -1,36 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Hãng sản xuất - AnVatShop.VN</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fdfdfd;
+        margin: 40px;
+        line-height: 1.6;
+      }
+      h1 {
+        color: #2c3e50;
+      }
+      .section {
+        margin-bottom: 30px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      code {
+        background-color: #e8e8e8;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-	<title>Hãng sản xuất - ITShop.VN</title>
-</head>
+  <body>
+    <div class="container">
+      <div id="navbar"></div>
 
-<body>
-	<div class="container">
-		<div id="navbar"></div>
-		
-		<div class="card mt-3">
-			<div class="card-header">Hãng sản xuất</div>
-			<div class="card-body">
-				<p class="card-text">Hướng dẫn sử dụng màn hình <strong>Hãng sản xuất</strong>.</p>
-				<img src="images/hangsanxuat.png" class="img-fluid mx-auto d-block" />
-			</div>
-		</div>
-		
-		<div id="footer"></div>
-	</div>
-	
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-	<script>
-		$(document).ready(() => {
-			$('#navbar').load('inc/navbar.html');
-			$('#footer').load('inc/footer.html');
-		});
-	</script>
-</body>
+      <div class="card mt-3">
+        <div class="card-header">Hãng sản xuất</div>
+        <div class="card-body">
+          <p class="card-text">
+            Hướng dẫn sử dụng màn hình <strong>Hãng sản xuất</strong>.
+          </p>
+          <div class="section">
+            <h2>1. Mục đích</h2>
+            <p>
+              Form "Hãng Sản Xuất" dùng để quản lý thông tin các hãng sản xuất
+              liên quan đến sản phẩm, thiết bị hoặc vật tư trong hệ thống.
+            </p>
+          </div>
 
+          <div class="section">
+            <h2>2. Chức năng chính</h2>
+            <ul>
+              <li>
+                <strong>Thêm mới:</strong> Nhập tên hãng, sau đó nhấn
+                <code>Thêm</code>.
+              </li>
+              <li>
+                <strong>Sửa:</strong> Chọn hãng từ danh sách, chỉnh sửa thông
+                tin rồi nhấn <code>Cập nhật</code>.
+              </li>
+              <li>
+                <strong>Xóa:</strong> Chọn hãng muốn xóa rồi nhấn
+                <code>Xóa</code>. Hệ thống có thể yêu cầu xác nhận.
+              </li>
+              <li>
+                <strong>Tìm kiếm:</strong> Nhập từ khóa (tên hãng hoặc mã) vào ô
+                tìm kiếm để lọc danh sách.
+              </li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h2>3. Các trường dữ liệu</h2>
+            <ul>
+              <li>
+                <code>Mã hãng:</code> Mã định danh duy nhất cho hãng (ví dụ:
+                H001, H002...)
+              </li>
+              <li>
+                <code>Tên hãng:</code> Tên đầy đủ của hãng sản xuất (ví dụ:
+                Samsung, Sony, Apple...)
+              </li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h2>4. Lưu ý khi sử dụng</h2>
+            <ul>
+              <li>Không để trống <code>Tên hãng</code>.</li>
+              <li>Không trùng tên giữa các hãng.</li>
+              <li>
+                Nếu hãng đã được dùng trong dữ liệu sản phẩm, hệ thống có thể
+                không cho phép xóa.
+              </li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h2>5. Giao diện mẫu</h2>
+            <p>Giao diện quản lý hãng sản xuất có thể như sau:</p>
+            <img
+              src="images/hangsanxuat.png"
+              alt="Form hãng sản xuất"
+              style="max-width: 100%; border: 1px solid #ccc; padding: 5px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="footer"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#navbar").load("inc/navbar.html");
+        $("#footer").load("inc/footer.html");
+      });
+    </script>
+  </body>
 </html>
